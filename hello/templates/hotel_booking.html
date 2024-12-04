@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/hotel.style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Hotel Booking</title>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">Hotel Booking</div>
+        <ul class="nav_links">
+            <li class="link"><a href="/index">Home</a></li>
+            <li class="link"><a href="/destination">Destination</a></li>
+            <li class="link"><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <header class="section_container header_container">
+        <div class="header_image_container">
+            <div class="header_content">
+                <h1>Enjoy Your Destination !</h1>
+                <p>Book Your Hotels, Flights at lowest cost.</p>
+            </div>
+            <div class="booking_container">
+                <form method="POST" action={% url "hotel_booking" %}>
+                    {% csrf_token %}
+                    <div class="form_group">
+                        <div class="input_group">
+                            <input type="text" name='name'>name
+                            
+                        </div>
+                    </div>
+                    <div class="form_group">
+                       <div class="input_group">
+                          <input type="text"name='place'>Place
+                          
+                       </div>
+                       <p>Your Destination</p>
+                    </div>
+                    <div class="form_group">
+                        <div class="input_group">
+                            <input type="text"name='date_from'>Date From
+                            
+                        </div>
+                        <p>Add date</p>
+                    </div>
+                    <div class="form_group">
+                        <div class="input_group">
+                            <input type="text"name='date_to'>Date To
+                            
+
+                        </div>
+                        <p>Add date</p>
+
+                    </div>
+                    <div class="form_group">
+                        <div class="input_group">
+                            <input type="text"name='no.of_guest'> No. of guest
+                            
+                        </div>
+                        <p>Add members</p>
+                    </div>
+                    <button type="submit" class="one btn btn-primary text-white">Submit Form</button>
+                </form>
+                <!-- I have taken this search icon from remixicon website -->
+                <button class="btn" type='submit'><i class="ri-search-line"></i></button>
+            </div>
+        </div>
+    </header>
+    <section class="section_container popular_container">
+        <h2 class="section_header">Popular Hotels</h2>
+        <div class="popular_grid">
+            <div class="popular_card">
+                <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/htl-imgs/201801311217256378-cd23c2543cae11e8bdf402755708f0b3.jpg" alt="room_image">
+                <div class="popular_content">
+                    <div class="popular_card_header">
+                        <h4>The Maharaja Hotel</h4>
+                        <h4>$450</h4>
+                    </div>
+                    <p>Uttarakhand, India</p>
+                </div>
+            </div>
+            <div class="popular_card">
+                <img src="https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/The-Oberoi-Mumbai/Room-and-Suites/Golconda-Presidential-Suite/overview-new/mumbai-rooms-suites-golconda-presidential-suites-906x450.jpg" alt="room_image">
+                <div class="popular_content">
+                    <div class="popular_card_header">
+                        <h4>The Oberoi Mumbai</h4>
+                        <h4>$400</h4>
+                    </div>
+                    <p>Mumbai, India</p>
+                </div>
+            </div>
+            <div class="popular_card">
+                <img src="https://i0.wp.com/landlopers.com/wp-content/uploads/2018/04/Mumbai-India-Taj-Mahal-Palace.jpg?fit=2048%2C1356&ssl=1" alt="room_image">
+                <div class="popular_content">
+                    <div class="popular_card_header">
+                        <h4>The Taj Mahal Palace</h4>
+                        <h4>$450</h4>
+                    </div>
+                    <p>Mumbai, India</p>
+                </div>
+            </div>
+            <div class="popular_card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/b3/09/b4/by-the-poolside.jpg?w=700&h=-1&s=1" alt="room_image">
+                <div class="popular_content">
+                    <div class="popular_card_header">
+                        <h4>Radisson Blu Hotel</h4>
+                        <h4>$450</h4>
+                    </div>
+                    <p>Chennai, India</p>
+                </div>
+            </div>
+            <div class="popular_card">
+                <img src="https://content.jdmagicbox.com/comp/delhi/x9/011pxx11.xx11.090625153311.i7x9/catalogue/eros-hotel-nehru-place-delhi-5-star-hotels-zv7wtgfegb.jpg" alt="room_image">
+                <div class="popular_content">
+                    <div class="popular_card_header">
+                        <h4>Eros Hotel</h4>
+                        <h4>$450</h4>
+                    </div>
+                    <p>New Delhi, India</p>
+                </div>
+            </div>
+            <div class="popular_card">
+                <img src="https://www.wishboneindia.com/wp-content/uploads/2015/10/Falaknuma-Palace-800x500.jpg" alt="room_image">
+                <div class="popular_content">
+                    <div class="popular_card_header">
+                        <h4>Taj Palace</h4>
+                        <h4>$450</h4>
+                    </div>
+                    <p>Hyderabad, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="client">
+        <div class="section_container client_container">
+            <h2 class="section_header">Our Clients Feedback</h2>
+            <div class="client_grid">
+                <div class="client_card">
+                    <img src="/static/img/room.jpg" alt=""> 
+                    <p>"The room was spacious, clean, and beautifully decorated. I felt relaxed and comfortable throughout my stay."</p>
+                </div>
+                <div class="client_card">
+                     <img src="/static/img/buffet.jpg" alt=""> 
+                    <p>The breakfast buffet was delicious, with a wide variety of options to choose from. It was the perfect start to my day.</p>
+
+                </div>
+                <div class="client_card">
+                     <img src="/static/img/spa.jpg" alt=""> 
+                    <p>The hotel's spa facilities were fantastic. I indulged in a relaxing massage and felt rejuvenated afterwards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

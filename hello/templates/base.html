@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/newindex.style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="links-container">
+                <li class="link-item"><a href="/location">Hotels Nearby</a></li>
+                <li class="link-item"><a href='#booknow'>Booknow</a></li>
+                <li class="link-item"><a href="destination/">Destination</a></li>
+                <li class="link-item"><a href="#hero-section"><img src="/static/logoo.png" class="logo" alt=""></a></li>
+                <li class="link-item"><a href="#services">Services</a></li>
+                <li class="link-item"><a href="/hotel_booking">Hotels</a></li>
+                
+                <li class="link-item"><a href='/contact'>Contact us</a></li>
+                <li class="link-item"><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="hero-section" id="hero-section">
+
+        <div class="hero-section-content" data-aos="fade-up">
+            <h1 class="hero-section-title">Traveller's Paradise</h1>
+            <p class="hero-section-sub-heading">Let's Begin your Travel Journey with us.</p>
+        </div>
+    
+        <!-- scroll down img -->
+        <img src="/static/index/down arrow.png" class="scroll-down-icon" alt="scroll down indicator">
+    </main>
+
+    <div class="background">
+        <img src="static/index/img4.png" class="background-image" alt="hero-section image">
+    
+        <!-- grid -->
+        <div class="grid-slider">
+            <div class="grid-item hide"></div>
+            <div class="grid-item hide"></div>
+            <div class="grid-item hide"></div>
+            <div class="grid-item hide"></div>
+            <div class="grid-item hide"></div>
+            <div class="grid-item hide"></div>
+        </div>
+    
+    </div>
+
+
+    <section class="explore-section" id="explore-section">
+        <h1 class="section-title" data-aos="fade-up">Explore the world</h1>
+        <p class="section-para" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum
+            sem augue, vitae bibendum nibh tempor nec. Aenean quis commodo lectus, in rhoncus lorem</p>
+    
+        <!-- grid -->
+    
+        <div class="tours-container">
+            <div class="tour-card" data-aos="fade-up">
+                <img src="/static/index/manali.jpg" class="tour-img" alt="tour-image">
+                <div class="tour-body">
+                    <h3 class="tour-name">Manali</h3>
+                  <a href="/himachal" style="color: white;
+                  text-decoration: none;">  <p class="tour-action">View city</p></a>
+                </div>
+            </div>
+    
+            <div class="tour-card" data-aos="fade-up">
+                <img src="/static/index/lakshadweep.jpg" class="tour-img" alt="tour-image">
+                <div class="tour-body">
+                    <h3 class="tour-name">Lakshadweep</h3>
+                    <a href="" style="color: white;
+                  text-decoration: none;">  <p class="tour-action">View city</p></a>
+                </div>
+            </div>
+    
+            <div class="tour-card" data-aos="fade-up">
+                <img src="/static/index/jaipur.jpg" class="tour-img" alt="tour-image">
+                <div class="tour-body">
+                    <h3 class="tour-name">Jaipur</h3>
+                    <a href="" style="color: white;
+                  text-decoration: none;">  <p class="tour-action">View city</p></a>
+                </div>
+            </div>
+    
+            <div class="tour-card" data-aos="fade-up">
+                <img src="/static/index/Darjeeling.jpg" class="tour-img" alt="tour-image">
+                <div class="tour-body">
+                    <h3 class="tour-name">Darjeeling</h3>
+                    <a href="" style="color: white;
+                  text-decoration: none;">  <p class="tour-action">View city</p></a>
+                </div>
+            </div>
+    
+            <div class="tour-card" data-aos="fade-up">
+                <img src="/static/index/india.png" class="tour-img" alt="tour-image">
+                <div class="tour-body">
+                    <h3 class="tour-name">Taj Mahal</h3>
+                    <a href="/delhi" style="color: white;
+                  text-decoration: none;">  <p class="tour-action">View city</p></a>
+                </div>
+            </div>
+    
+            <div class="tour-card" data-aos="fade-up">
+                <img src="/static/index/kerala.jpg" class="tour-img" alt="tour-image">
+                <div class="tour-body">
+                    <h3 class="tour-name">kerala</h3>
+                    <a href="kerala" style="color: white;
+                  text-decoration: none;">  <p class="tour-action">View city</p></a>
+                </div>
+            </div>
+        </div>
+        <a href="" class="Destinations" style="display: block; margin-top: 2rem; background-color: transparent; color: white; font-size: 1.52rem;">Explore more Destinations</a>
+    </section>
+    
+
+    <section class="services-section" id="services">
+        <h1 class="section-title" data-aos="fade-up">Why Us ?</h1>
+        <p class="section-para" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    
+        <!-- services grid -->
+        <div class="serives-grid">
+            <div class="service-card" data-aos="fade-up">
+                <div class="circle"></div>
+                <i class="fa-solid fa-earth-americas card-icon"></i>
+                <p class="service-text">We are based all over the world</p>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <div class="circle"></div>
+                <i class="fa-solid fa-coins card-icon"></i>
+                <p class="service-text">Travel the World,Without thinking</p>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <div class="circle"></div>
+                <i class="fa-solid fa-book-open card-icon"></i>
+                <p class="service-text">Get to know about local cultures</p>
+            </div>
+            <div class="service-card" data-aos="fade-up">
+                <div class="circle"></div>
+                <i class="fa-solid fa-person-snowboarding card-icon"></i>
+                <p class="service-text">Have you best experience</p>
+            </div>
+        </div>
+    
+        <div class="bg-circle"></div>
+     
+      
+
+        
+    
+    </section>
+
+
+    <section class="book-section" id="booknow">
+        <div class="book-content" data-aos="fade-up">
+            <h1 class="book-now-title">Book your travel today</h1>
+            <p class="book-now-text">Give yourself and your family a peacfull and wonderful vacation this holiday</p>
+    
+            <button class="book-now">    <a href="/flight-booking" style="color: white; text-decoration: none;"> Book Now</a> </button>
+        </div>
+        <div class="bg-circle-2"></div>
+        <img src="/static/index/book.png" data-aos="fade-up" class="book-now-img" alt="">
+    </section>
+
+<!-- footer -->
+<footer class="footer">
+    <img src="/static/index/logo.png" class="footer-logo" alt="">
+    <div class="footer-text">
+        <p>Travel the world, on this holiday</p>
+        <p>Email - support@travel.com</p>
+        <p>Phone - 99 88 776655, 99 88 776644</p>
+    </div>
+    <!-- <p class="copyright-line">This design is a concept design. Made by Modern Web ❤️</p> -->
+</footer>
+    <script src="static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/rail.style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Flight Booking</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .form_group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form_group input, .form_group select {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form_group label {
+            margin-bottom: 5px;
+        }
+        .form_group button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form_group button:hover {
+            background-color: #0056b3;
+        }
+        #form {
+            display: flex;
+            flex-direction: column;
+        }
+        #input, #input2, #input3, #input4, #input6 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #input input, #input select, #input2 input, #input4 input, #input6 input {
+            flex: 1 1 48%;
+            margin-bottom: 10px;
+        }
+        #input3 input[type="radio"] {
+            margin-right: 10px;
+        }
+        #input5 {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="post" class="form_group">
+            {% csrf_token %}
+            <div id="form">
+                <h1>Flight Booking Details</h1>
+                <div id="input">
+                    <select id="input-group" placeholder="From">
+                        <option value="">Select Departure Airport</option>
+                        <option value="DEL">Delhi - Indira Gandhi International Airport</option>
+                        <option value="BOM">Mumbai - Chhatrapati Shivaji Maharaj International Airport</option>
+                        <option value="BLR">Bangalore - Kempegowda International Airport</option>
+                        <option value="HYD">Hyderabad - Rajiv Gandhi International Airport</option>
+                        <option value="MAA">Chennai - Chennai International Airport</option>
+                        <option value="CCU">Kolkata - Netaji Subhas Chandra Bose International Airport</option>
+                        <option value="AMD">Ahmedabad - Sardar Vallabhbhai Patel International Airport</option>
+                        <option value="COK">Kochi - Cochin International Airport</option>
+                        <option value="GOI">Goa - Goa International Airport</option>
+                        <option value="PNQ">Pune - Pune International Airport</option>
+                        <option value="ATQ">Amritsar - Sri Guru Ram Dass Jee International Airport</option>
+                        <option value="JAI">Jaipur - Jaipur International Airport</option>
+                        <option value="TRV">Thiruvananthapuram - Trivandrum International Airport</option>
+                        <option value="LKO">Lucknow - Chaudhary Charan Singh International Airport</option>
+                        <option value="VGA">Vijayawada - Vijayawada International Airport</option>
+                        <option value="PAT">Patna - Jay Prakash Narayan International Airport</option>
+                        <option value="GAU">Guwahati - Lokpriya Gopinath Bordoloi International Airport</option>
+                        <option value="SXR">Srinagar - Sheikh ul-Alam International Airport</option>
+                        <option value="BBI">Bhubaneswar - Biju Patnaik International Airport</option>
+                        <!-- Add more airports as needed -->
+                    </select>
+                    <select id="input-group" placeholder="To">
+                        <option value="">Select Arrival Airport</option>
+                        <option value="DEL">Delhi - Indira Gandhi International Airport</option>
+                        <option value="BOM">Mumbai - Chhatrapati Shivaji Maharaj International Airport</option>
+                        <option value="BLR">Bangalore - Kempegowda International Airport</option>
+                        <option value="HYD">Hyderabad - Rajiv Gandhi International Airport</option>
+                        <option value="MAA">Chennai - Chennai International Airport</option>
+                        <option value="CCU">Kolkata - Netaji Subhas Chandra Bose International Airport</option>
+                        <option value="AMD">Ahmedabad - Sardar Vallabhbhai Patel International Airport</option>
+                        <option value="COK">Kochi - Cochin International Airport</option>
+                        <option value="GOI">Goa - Goa International Airport</option>
+                        <option value="PNQ">Pune - Pune International Airport</option>
+                        <option value="ATQ">Amritsar - Sri Guru Ram Dass Jee International Airport</option>
+                        <option value="JAI">Jaipur - Jaipur International Airport</option>
+                        <option value="TRV">Thiruvananthapuram - Trivandrum International Airport</option>
+                        <option value="LKO">Lucknow - Chaudhary Charan Singh International Airport</option>
+                        <option value="VGA">Vijayawada - Vijayawada International Airport</option>
+                        <option value="PAT">Patna - Jay Prakash Narayan International Airport</option>
+                        <option value="GAU">Guwahati - Lokpriya Gopinath Bordoloi International Airport</option>
+                        <option value="SXR">Srinagar - Sheikh ul-Alam International Airport</option>
+                        <option value="BBI">Bhubaneswar - Biju Patnaik International Airport</option>
+                        <!-- Add more airports as needed -->
+                    </select>
+                    <input type="date" id="input-group" placeholder="Departure Date">
+                    <input type="time" id="input-group" placeholder="Departure Time">
+                    <select name="input-group" style="background: rgba(227, 223, 223, 0.87);">
+                        <option value="">Preferred Airlines</option>
+                        <option value="IndiGo">IndiGo</option>
+                        <option value="AirIndia">AirIndia</option>
+                        <option value="SpiceJet">SpiceJet</option>
+                    </select>
+                    <select id="input-group" style="background: rgba(227, 223, 223, 0.87);">
+                        <option value="">Preferred Seating</option>
+                        <option value="Economy">Economy Class</option>
+                        <option value="Business">Business Class</option>
+                        <option value="First">First Class</option>
+                    </select>
+                </div>
+                <div id="input2">
+                    <input type="number" id="input-group" placeholder="Adult" min="1">
+                    <input type="number" id="input-group" placeholder="Children (2-11 years)" min="0">
+                    <input type="number" id="input-group" placeholder="Infant (under 2 years)" min="0">
+                </div>
+                <div id="input3">
+                    <span id="input-group" class="text-primary">Select Your Charge</span>
+                    <input type="radio" id="input-group" name="trip_type" value="one_way">
+                    <label class="text-dark" for="one_way">One Way</label>
+                    <input type="radio" id="input-group" name="trip_type" value="round_trip">
+                    <label class="text-dark" for="round_trip">Round Trip</label>
+                </div>
+                <div id="input4">
+                    <input type="date" id="input-group" placeholder="Return Date">
+                    <input type="time" id="input-group" placeholder="Return Time">
+                    <input type="text" id="input-group" placeholder="Any Message">
+                </div>
+                <div id="input5">
+                    <h1>Client Information</h1>
+                </div>
+                <div id="input6">
+                    <input type="text" id="input-group" placeholder="Full Name">
+                    <input type="text" id="input-group" placeholder="Phone Number">
+                    <input type="email" id="input-group" placeholder="Email">
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <button type="submit" class="one btn btn-primary text-white">Submit Form</button>
+                    <button type="reset" class="one btn btn-secondary text-white">Clear Form</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+<form action="/contact" method="post">
+    {% csrf_token %}

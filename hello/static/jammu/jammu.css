@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.navbar {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    background-color: black;
+    color: aliceblue;
+    list-style-type: none;
+}
+
+.navbar a {
+    color: chartreuse;
+    text-decoration: none;
+}
+
+.jammu-banner {
+    height: 91vh;
+    width: 40vw;
+    transform: skew(-10deg, 0);
+    position: relative;
+    left: -60px;
+
+}
+
+#jammu-banner {
+    display: inline-block;
+}
+
+#jammu-tag {
+    display: inline-block;
+
+}
+
+.heading {
+    font-size: 5rem;
+    position: absolute;
+    top: 15vh;
+    left: 41vw;
+
+}
+
+.quote {
+    font-size: 1.5rem;
+    color: orangered;
+    position: absolute;
+    top: 28vh;
+    left: 55vw;
+
+}
+iframe{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    height: 60vh;
+    width: 55vw;
+    transform: skew(-10deg, 0);
+    border-radius: 30px;
+    
+}
+
+.bar {
+    display: flex;
+    justify-content: space-evenly;
+    height: 16vh;
+    width: 95%;
+    background-color: rgba(225, 225, 225, 0.1);
+    border: 2px solid rgba(225, 225, 225, 0.7);
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    left: 2.5vw;
+    list-style-type: none;
+    align-items: center;
+    font-size: 1.5rem;
+    z-index: 100;
+    top: 5vh;
+    color: white;
+    
+ 
+}
+.bar li a{
+    text-decoration: none;
+    color: white;
+}
+
+#bar-layover {
+    background-image: url("/static/jammu/neon-banner.jpg");
+    background-size: cover;
+    position: absolute;
+    height: 32vh;
+    width: 100%;
+    top: 98vh;
+    margin-top: 0;
+    border-radius: 20px;
+    
+
+}
+
+#overview-section {
+    height: 110vh;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 2%;
+    background-color: lavender;
+    border-radius: 30px;
+    width: 95%;
+}
+#best-time-section {
+    
+    height: 65vh;
+    width: 100%;
+    margin-left: 2%;
+    
+   
+}
+.overview h1,
+.best-time-visit h1 {
+
+    font-weight: 900;
+    color: darkmagenta;
+    font-size: 4em;
+
+
+}
+
+.overview p{
+    font-weight: 300;
+    font-size: 1.2em;
+    margin: 1.5% 0% 0% 2%;
+   
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 17vw;
+    height: 35vh;
+    perspective: 1000px;
+}
+
+.card-front1,.card-front2,.card-front3, .card-back1, .card-back2, .card-back3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    font-size: 1.2em;
+    transition: transform 0.6s;
+    border-radius: 10px;
+}
+
+.card-front1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    background-color: #ffffff;
+    background-image: url("/static/jammu/winter.jpg");
+    background-size: cover;
+    border: 1px solid #ccc;
+}
+
+.card-back1 {
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card:hover .card-front1 {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back1 {
+    transform: rotateY(0deg);
+}
+.card-front2 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    background-color: #ffffff;
+    background-image: url("/static/jammu/summer.jpg");
+    background-size: cover;
+    border: 1px solid #ccc;
+}
+
+.card-back2 {
+    background-color: #4CAF50;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card:hover .card-front2 {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back2 {
+    transform: rotateY(0deg);
+}
+.card-front3 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    background-color: #ffffff;
+    background-image: url("/static/jammu/monsoon.jpg");
+    background-size: cover;
+    border: 1px solid #ccc;
+}
+
+.card-back3 {
+    background-color: #4CAF50;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card:hover .card-front3 {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back3 {
+    transform: rotateY(0deg);
+}
+
+#how-to-reach-section {
+    height: 110vh;
+    width: 100%;
+    margin-top: 25%;
+    margin-left: 2%;
+}
+.how-to-reach{
+   
+    width: 95%;
+    margin-top: -20%;
+}
+
+.how-to-reach h1 {
+    font-weight: 900;
+    color: darkmagenta;
+    font-size: 4em;
+}   
+
+.how-to-reach p {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin: 1.5% 0% 2% 2%;
+       
+}
+#places-visit-section{
+    height: 120vh;
+    width: 100%;
+    margin-left: 2%;
+    background-color: lavender;
+    border-radius: 30px;
+    width: 95%;
+}
+
+.places-visit h1{
+    
+    font-weight: 900;
+    color: darkmagenta;
+    font-size: 4em;
+    margin: 2%;
+
+}
+#slider-bar{
+    position: absolute;
+    top: 395%;
+    left: 50%;
+    
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    
+}
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+.overview h3{
+    margin: 2%;
+}
+
+#package{
+    height: 50vh;
+    background-color: lavender;
+    border-radius: 30px;
+    width: 95%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+   
+}
+#package h2{
+    font-weight: 900;
+    color: darkmagenta;
+    font-size: 4em;
+    
+    
+}
+#package button{
+    height: 6vh;
+    width: 7vw;
+    margin-left: 3%;
+    color: #fff; 
+    background-color: darkorange;
+    border-radius: 10px;
+}
+#package p{
+    font-size: 1.4em;
+    margin-left: 1%;
+}
+#package li{
+    font-size: 1.2em;
+    margin-left: 3%;
+
+}
+
+footer{
+    height: 55vh;
+    background-image: url(https://img.freepik.com/premium-vector/blue-abstract-modern-background-frame-border-banner-design-with-empty-space-middle_311875-1442.jpg?w=1380);
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Login and Register Form Html Templates</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.png">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="/static/css/fontawesome-all.min.css">
+	<!-- Flaticon CSS -->
+	<link rel="stylesheet" href="/static/font/flaticon.css">
+	<!-- Google Web Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/static/register.style.css">
+</head>
+
+<body>
+	<section class="fxt-template-animation fxt-template-layout28" data-bg-image="/static/bg-1.jpg">
+		<!-- Animation Start Here -->
+		<div id="particles-js"></div>
+		<!-- Animation End Here -->
+		<div class="fxt-content">
+			<div class="fxt-header">
+
+				<a href="login/" class="fxt-logo" style="color: aliceblue; font-size: xx-large; text-decoration: underline; font-weight: 480;"> Begin Your Journey</a>
+	
+				<ul class="fxt-switcher-wrap">
+					<li><a href='login/' class="switcher-text">Login</a></li>
+					
+					<li><a href="forgot-password.html" class="switcher-text">Forgot Password</a></li>
+				</ul>
+			</div>
+			<div class="fxt-form">
+				<div class="fxt-transformY-50 fxt-transition-delay-1">
+					<p>Create an account</p>
+				</div>
+				<form method="post" action="{% url 'register' %}">
+					{% csrf_token %}
+					<div class="form-group">
+						<div class="fxt-transformY-50 fxt-transition-delay-2">
+							<input type="text" id="name" class="form-control" name="UserName" placeholder="UserName" required="required">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="fxt-transformY-50 fxt-transition-delay-3">
+							<input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="fxt-transformY-50 fxt-transition-delay-4">
+							<input id="password" type="password" class="form-control" name="password" placeholder="********" required="required">
+							<i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="fxt-transformY-50 fxt-transition-delay-5">
+							<button type="submit" class="fxt-btn-fill">Register</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="fxt-style-line">
+				<div class="fxt-transformY-50 fxt-transition-delay-5">
+					<h3>Or Login With</h3>
+				</div>
+			</div>
+			<ul class="fxt-socials">
+				<li class="fxt-facebook fxt-transformY-50 fxt-transition-delay-6">
+					<a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+				</li>
+				<li class="fxt-twitter fxt-transformY-50 fxt-transition-delay-7">
+					<a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="fxt-google fxt-transformY-50 fxt-transition-delay-8">
+					<a href="#" title="google"><i class="fab fa-google-plus-g"></i></a>
+				</li>
+				<li class="fxt-linkedin fxt-transformY-50 fxt-transition-delay-9">
+					<a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+				</li>
+				<li class="fxt-pinterest fxt-transformY-50 fxt-transition-delay-10">
+					<a href="#" title="pinterest"><i class="fab fa-pinterest-p"></i></a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- jquery-->
+	<script src="/static/js/jquery-3.5.0.min.js"></script>
+	<!-- Popper js -->
+	<script src="/static/js/popper.min.js"></script>
+	<!-- Bootstrap js -->
+	<script src="/static/js/bootstrap.min.js"></script>
+	<!-- Imagesloaded js -->
+	<script src="/static/js/imagesloaded.pkgd.min.js"></script>
+	<!-- Particles js -->
+	<script src="/static/js/particles.js"></script>
+	<script src="/static/js/particles-3.js"></script>
+	<!-- Validator js -->
+	<script src="/static/js/validator.min.js"></script>
+	<!-- Custom Js -->
+	<script src="/static/js/main.js"></script>
+
+</body>
+
+</html>

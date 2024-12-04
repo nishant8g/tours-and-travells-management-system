@@ -1,0 +1,69 @@
+*{
+    padding: 8px;
+    margin: 5px;
+    box-sizing: border-box;
+    border-radius: 30%;
+    font-family: Poppins;
+}
+
+/* body{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://static1.simpleflyingimages.com/wordpress/wp-content/uploads/2023/02/shutterstock_420412972.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    width: 100%;
+    max-width: 750px;
+    background: rgba(0, 0, 0, 0.307);
+    padding: 28px;
+    margin: 0 28px;
+}
+
+.form{
+    background-color: #000000a7;
+    height: 520px;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+
+::placeholder{
+    color: #171111cc;
+}
+
+.input .input-group{
+    width: 500px;
+    margin: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+
+} */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://wallpapers.com/images/hd/google-flights-boarding-bridge-jl806rxrcusgxwtk.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* .form h3{
+    border-bottom: 2px solid rgba(0, 0, 255, 0.722);
+    width: 185px;
+    padding: 6px;
+    font-size: 1.5rem;
+} */
+
